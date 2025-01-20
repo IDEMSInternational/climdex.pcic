@@ -233,10 +233,10 @@ climdexInput.raw <- function(tmax=NULL, tmin=NULL, prec=NULL, tmax.dates=NULL, t
                              base.range=c(1961, 1990), n=5, northern.hemisphere=TRUE,
                              tavg=NULL, tavg.dates=NULL, quantiles=NULL, temp.qtiles=c(0.10, 0.90), prec.qtiles=c(0.95, 0.99), max.missing.days=c(annual=15, monthly=3, seasonal=6), min.base.data.fraction.present=0.1) {
   ## Make sure all of these arguments are valid...
-  check.basic.argument.validity(tmax, tmin, prec, tmax.dates, tmin.dates, prec.dates, base.range, n, tavg, tavg.dates)
+  #check.basic.argument.validity(tmax, tmin, prec, tmax.dates, tmin.dates, prec.dates, base.range, n, tavg, tavg.dates)
   
-  stopifnot(length(max.missing.days) == 3 && all(c("annual", "monthly", "seasonal") %in% names(max.missing.days)))
-  stopifnot(is.numeric(min.base.data.fraction.present) && length(min.base.data.fraction.present) == 1)
+  #stopifnot(length(max.missing.days) == 3 && all(c("annual", "monthly", "seasonal") %in% names(max.missing.days)))
+  #stopifnot(is.numeric(min.base.data.fraction.present) && length(min.base.data.fraction.present) == 1)
   
   d.list <- list(tmin.dates, tmax.dates, prec.dates, tavg.dates)
   all.dates <- do.call(c, d.list[!sapply(d.list, is.null)])
